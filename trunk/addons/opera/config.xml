@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget xmlns="http://www.w3.org/ns/widgets" id="https://addons.opera.com/addons/extensions/details/retrolink/" version="1.0">
+  <name>retroLink</name>
+  <icon src="images/icon_64.png"/>
+  <icon src="images/icon.png"/>
+  <update-description href="https://extension-updates.opera.com/api/w3c-wd1/update/74379860-35b5-439a-b663-9993e67e78c8/"/>
+  <license>Copyright 2011 patrique. All rights reserved.</license>
+  <author href="http://retrolink.com.br/">patrique</author>
+  <description xml:lang="pt-br">Desprotege links protegidos com apenas 1 clique! Diga não a sites que exigem o cadastramento de celular para liberar o endereço url do arquivo para download.</description>
+</widget>

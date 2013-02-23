@@ -1,0 +1,409 @@
+﻿<project version = 9 civer = 5.12.1 winver = "2.9/6.1.7600" >
+   <autorun >1</>
+   <autoclose >0</>
+   <compname >retrolink</>
+   <produrl >http://www.retrolink.com.br</>
+   <ver >1.0</>
+   <supurl >http://www.retrolink.com.br</>
+   <updurl ></>
+   <dlgfont >verdana</>
+   <headlogo >default - 1</>
+   <dlgfontsize >s8</>
+   <output >c:\setups</>
+   <exename >setup.exe</>
+   <beffile ></>
+   <aftfile ></>
+   <uninclude >1</>
+   <lang >portuguese_br</>
+   <addlang ></>
+   <selfextr >1</>
+   <instpath ></>
+   <voltype >nolimit</>
+   <volsize ></>
+   <volpattern >disk%i.pak</>
+   <password ></>
+   <progname >retroLink</>
+   <appname >retroLink 1.0</>
+   <bl ></>
+   <blurl ></>
+   <unpath >inst</>
+   <unexe >uninstall.exe</>
+   <unlog >uninstall.ini</>
+   <installroot sorttype = 0 >
+      <children >
+         <install id = install expanded = 2 >
+            <children >
+               <_ id = background disabled = 1 >
+                  <desc ></>
+                  <head >#lcaption#</>
+                  <foot ></>
+                  <font >Times</>
+                  <height >36</>
+                  <bold >0</>
+                  <italic >0</>
+                  <backcol >0x0000FF</>
+                  <textcol >0xFFFFFF</>
+                  <shadecol >0x888888</>
+                  <uniform >0</>
+                  <backbmp ></>
+                  <stretchback >0</>
+               </>
+               <_ id = checkreq expanded = 0 disabled = 1 >
+                  <children >
+                     <_ id = empty ></>
+                  </>
+                  <desc ></>
+                  <checktype >admin</>
+                  <resvar >ischeck</>
+                  <not >0</>
+                  <msg ></>
+               </>
+               <_ id = dlglang disabled = 1 >
+                  <desc ></>
+                  <buttons >nc</>
+                  <design >left</>
+                  <headlogo ></>
+                  <varlist >
+                     <rows ></>
+                  </>
+                  <head ></>
+                  <headtext ></>
+                  <dlgtext ></>
+                  <if ></>
+               </>
+               <_ id = dlgwel disabled = 0 >
+                  <desc ></>
+                  <buttons >auto</>
+                  <design >left</>
+                  <headlogo ></>
+                  <varlist >
+                     <rows ></>
+                  </>
+                  <head ></>
+                  <headtext >Retrolink para Internet Explorer</>
+                  <dlgtext >O RetroLink é uma extensão para o Internet Explorer, que desbloqueia links protegidos, elimina o tempo de espera e as páginas de cadastro de celular, liberando assim a página correta para que você faça o download sem problemas.
+
+Ao clicar em avançar, você estara instalando a addon do retroLink para o Internet Explorer, com ela com apenas um único clique, você conseguirá deproteger qualquer link protegido.
+
+O retrolink também possui addons para Firefox, Opera e Chrome! Para mais informações acesse o nosso site. 
+
+
+http://www.retrolink.com.br</>
+                  <if ></>
+               </>
+               <_ tag = 0 id = regset >
+                  <desc >retrolink</>
+                  <root >curuser</>
+                  <subkey >Software\Microsoft\Internet Explorer\MenuExt\retroLink Desprotetor</>
+                  <reglist >
+                     <rows >
+                        <_ >
+                           <valname ></>
+                           <regtype >str</>
+                           <value >http://www.retrolink.com.br/addon-ie.asp</>
+                        </>
+                     </>
+                  </>
+                  <wow64 >0</>
+               </>
+               <_ id = dlglic disabled = 1 >
+                  <desc ></>
+                  <file ></>
+                  <print >1</>
+                  <iagree >radio</>
+                  <buttons >pnc</>
+                  <design >left</>
+                  <headlogo ></>
+                  <varlist >
+                     <rows >
+                        <_ >
+                           <varname >Liccolor</>
+                           <value >1</>
+                        </>
+                     </>
+                  </>
+                  <head ></>
+                  <headtext ></>
+                  <if ></>
+               </>
+               <_ id = dlgfin disabled = 0 >
+                  <desc >descrição</>
+                  <buttons >c</>
+                  <design >left</>
+                  <headlogo ></>
+                  <chlist >
+                     <rows ></>
+                  </>
+                  <varlist >
+                     <rows ></>
+                  </>
+                  <head >cabeçalho</>
+                  <headtext >retroLink foi instalado com sucesso!</>
+                  <dlgtext >A instalação do desprotetor de links retroLink foi finalizada com sucesso, agradecemos seu interesse pelo programa e esperamos cumprir com as expectativas.
+
+http://www.retrolink.com.br</>
+               </>
+               <_ tag = 0 id = regset >
+                  <desc ></>
+                  <root >locmach</>
+                  <subkey >Software\Microsoft\Internet Explorer\Extensions\{3ED4B27D-83FE-4FD6-9948-8188C6B15A99}</>
+                  <reglist >
+                     <rows >
+                        <_ >
+                           <valname >ButtonText</>
+                           <regtype >str</>
+                           <value >retroLink Desprotetor</>
+                        </>
+                        <_ >
+                           <valname >CLSID</>
+                           <regtype >str</>
+                           <value >{143529F9-704B-4727-836B-7B1A8BC27DDC}</>
+                        </>
+                        <_ >
+                           <valname >Default Visible</>
+                           <regtype >str</>
+                           <value >Yes</>
+                        </>
+                        <_ >
+                           <valname >HotIcon</>
+                           <regtype >str</>
+                           <value >C:\\Windows\\retrolink.ico</>
+                        </>
+                        <_ >
+                           <valname >Icon</>
+                           <regtype >str</>
+                           <value >C:\\Windows\\retrolink.ico</>
+                        </>
+                        <_ >
+                           <valname >MenuText</>
+                           <regtype >str</>
+                           <value >retroLink Desprotetor</>
+                        </>
+                        <_ >
+                           <valname >Script</>
+                           <regtype >str</>
+                           <value >http://www.retrolink.com.br/addon-ie.asp</>
+                        </>
+                     </>
+                  </>
+                  <wow64 >0</>
+               </>
+               <_ tag = 0 id = unpack >
+                  <desc ></>
+                  <comptype >default</>
+                  <ratio >r5</>
+                  <solid >1</>
+                  <path >win</>
+                  <custpath ></>
+                  <ifexist >overnewer</>
+                  <if ></>
+                  <srclist >
+                     <rows >
+                        <_ >
+                           <filename >C:\Users\Windows 7\Desktop\icon_128.ico</>
+                           <recurse >1</>
+                           <justfile >0</>
+                           <emptydir >0</>
+                           <exclude ></>
+                        </>
+                     </>
+                  </>
+                  <varlist >
+                     <rows ></>
+                  </>
+               </>
+               <_ tag = 0 id = dlgready disabled = 1 >
+                  <desc ></>
+                  <readytext >#lpathdest#:
+   #setuppath#</>
+                  <head ></>
+                  <headtext ></>
+                  <headlogo ></>
+                  <buttons >auto</>
+                  <if ></>
+                  <varlist >
+                     <rows ></>
+                  </>
+               </>
+            </>
+            <icofile >C:\Users\Windows 7\Desktop\icon_128.ico</>
+            <resfile ></>
+            <leftimg >install - 1</>
+            <caption ></>
+            <verinfo >0</>
+            <noadmin >0</>
+         </>
+      </>
+   </>
+   <uninstallroot sorttype = 0 >
+      <children >
+         <uninstall id = uninstall expanded = 2 >
+            <children >
+               <_ id = dlguconf >
+                  <desc >Retrolink Descrição</>
+                  <buttons >c</>
+                  <design >left</>
+                  <headlogo ></>
+                  <varlist >
+                     <rows ></>
+                  </>
+                  <head >teste cabeçalho</>
+                  <headtext >descrição cabeçalho</>
+                  <dlgtext >texto</>
+                  <if ></>
+               </>
+               <_ id = dlguprog expanded = 0 >
+                  <children >
+                     <_ id = unprocess >
+                        <desc ></>
+                     </>
+                  </>
+                  <desc ></>
+                  <buttons >nc</>
+                  <design >left</>
+                  <headlogo ></>
+                  <varlist >
+                     <rows ></>
+                  </>
+                  <auto >1</>
+                  <head ></>
+                  <headtext ></>
+                  <dlgtext ></>
+                  <if ></>
+               </>
+               <_ tag = 0 id = iniset >
+                  <desc ></>
+                  <path >inst</>
+                  <ifile ></>
+                  <section ></>
+                  <inilist >
+                     <rows ></>
+                  </>
+               </>
+               <_ tag = 0 id = iniget >
+                  <desc ></>
+                  <path >inst</>
+                  <ifile ></>
+                  <section ></>
+                  <inilist >
+                     <rows ></>
+                  </>
+               </>
+               <_ tag = 0 id = regset >
+                  <desc ></>
+                  <root >curuser</>
+                  <subkey ></>
+                  <reglist >
+                     <rows ></>
+                  </>
+                  <wow64 >0</>
+               </>
+               <_ id = dlgundel >
+                  <desc ></>
+                  <buttons >nc</>
+                  <design >left</>
+                  <headlogo ></>
+                  <varlist >
+                     <rows ></>
+                  </>
+                  <head ></>
+                  <headtext ></>
+                  <dlgtext ></>
+                  <if ></>
+               </>
+               <_ id = dlgufin >
+                  <desc ></>
+                  <buttons >nc</>
+                  <design >left</>
+                  <headlogo ></>
+                  <varlist >
+                     <rows ></>
+                  </>
+                  <head ></>
+                  <headtext ></>
+                  <dlgtext ></>
+                  <feedback ></>
+                  <if ></>
+               </>
+               <_ tag = 0 id = run >
+                  <desc ></>
+                  <path >inst</>
+                  <name ></>
+                  <cmdline ></>
+                  <work >default</>
+                  <defwork ></>
+                  <wait >1</>
+                  <runas >norm</>
+                  <if ></>
+               </>
+               <_ tag = 0 id = shell >
+                  <desc ></>
+                  <path >inst</>
+                  <name ></>
+                  <if ></>
+               </>
+               <_ tag = 0 id = unprocess >
+                  <desc ></>
+               </>
+               <_ tag = 0 id = dlgundel >
+                  <desc ></>
+                  <head ></>
+                  <headtext ></>
+                  <dlgtext ></>
+                  <headlogo ></>
+                  <if ></>
+                  <varlist >
+                     <rows ></>
+                  </>
+               </>
+               <_ tag = 0 id = regset >
+                  <desc ></>
+                  <root >curuser</>
+                  <subkey ></>
+                  <reglist >
+                     <rows ></>
+                  </>
+                  <wow64 >0</>
+               </>
+               <_ tag = 0 id = regget >
+                  <desc ></>
+                  <root >curuser</>
+                  <subkey ></>
+                  <reglist >
+                     <rows ></>
+                  </>
+                  <wow64 >0</>
+               </>
+            </>
+            <unicon >uninstall</>
+            <unresfile ></>
+            <leftimg >uninstall - 1</>
+            <caption ></>
+            <noadmin >0</>
+         </>
+      </>
+   </>
+   <phone ></>
+   <shfolder ></>
+   <headcol ></>
+   <headtext ></>
+   <headimg ></>
+   <stretchback >0</>
+   <silentpar >-silent</>
+   <custfont ></>
+   <upinclude >0</>
+   <uppath >inst</>
+   <upexe >update.exe</>
+   <upurl ></>
+   <upxml >update.ini</>
+   <upredir ></>
+   <csfile ></>
+   <csinst >"<exefilename>"</>
+   <csuninst >"<exefilename>"</>
+   <csupdate >"<exefilename>"</>
+   <crautorun >0</>
+   <autoicon ></>
+   <multilist >
+      <rows ></>
+   </>
+</>
