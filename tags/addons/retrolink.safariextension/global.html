@@ -1,0 +1,13 @@
+<!DOCTYPE HTML>
+<script>
+safari.application.addEventListener("command", performCommand, false);
+
+var url = window.location.href;
+
+function performCommand(event) {
+    if (event.command == "open-retrolink") {
+	    var url = safari.application.activeBrowserWindow.activeTab.url
+		safari.application.activeBrowserWindow.activeTab.url = 'http://retrolink.com.br/api/?addon=safari&url='+url;
+    }
+}
+</script>
