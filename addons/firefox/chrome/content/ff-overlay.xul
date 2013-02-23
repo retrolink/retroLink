@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="chrome://retrolink/skin/overlay.css" type="text/css"?>
+<overlay id="retrolink-overlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+    <popupset>
+        <menupopup id="retrolink-menu-popup">
+            <menuitem label="Acessar retroLink" oncommand="gBrowser.selectedTab = gBrowser.addTab('http://retrolink.com.br/');" class="menuitem-iconic" image="chrome://retrolink/skin/icon16.png"/>
+        </menupopup>
+    </popupset>
+    <toolbarpalette id="BrowserToolbarPalette">
+        <toolbarbutton id="retrolink-toolbar-button" class="toolbarbutton-1" context="retrolink-menu-popup" oncommand="gBrowser.selectedTab = gBrowser.addTab('http://retrolink.com.br/api/?versao=1&amp;addon=firefox&amp;url=' + gBrowser.currentURI.spec);" label="retroLink" tooltiptext="Desproteger URL" />
+    </toolbarpalette>
+    <popup id="contentAreaContextMenu">
+		<menuitem label="Desproteger URL" id="context-retrolink" insertafter="context-stop" oncommand="gBrowser.selectedTab = gBrowser.addTab('http://retrolink.com.br/api/?versao=1&amp;addon=firefox&amp;url=' + gBrowser.currentURI.spec);" class="menuitem-iconic" image="chrome://retrolink/skin/icon16.png"/>
+	</popup>
+	<script type="application/x-javascript;version=1.8" src="retrolink.js"/>
+</overlay>
