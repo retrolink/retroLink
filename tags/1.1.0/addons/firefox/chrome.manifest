@@ -1,0 +1,5 @@
+content   retrolink                 chrome/content/
+skin      retrolink   classic/1.0   chrome/skin/
+
+overlay   chrome://browser/content/browser.xul   chrome://retrolink/content/ff-overlay.xul
+style chrome://global/content/customizeToolbar.xul chrome://retrolink/skin/overlay.css

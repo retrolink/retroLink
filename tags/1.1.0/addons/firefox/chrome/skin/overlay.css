@@ -1,0 +1,7 @@
+#retrolink-toolbar-button {
+    list-style-image:url(chrome://retrolink/skin/icon24.png);
+}
+
+toolbar[iconsize="small"] #retrolink-toolbar-button {
+    list-style-image:url(chrome://retrolink/skin/icon16.png);
+}
