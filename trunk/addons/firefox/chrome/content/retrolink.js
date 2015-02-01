@@ -2,7 +2,7 @@ var RetroLink_app = {
 	
 	/*	
 	 * This button must be always on toolbar because the addon is only this button.
-	 * If the user dont want it anymore he should uninstall the addon.
+	 * If the user doesn't want it anymore he should uninstall the addon.
 	*/
 	addButton: function() {
 		

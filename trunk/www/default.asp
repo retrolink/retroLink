@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
 <html lang="pt-br" dir="ltr" xml:lang="pt-br" xmlns="http://www.w3.org/1999/xhtml">
 	<head profile="http://gmpg.org/xfn/11">
 		<title>retroLink.com.br | Desprotetor de links, burlar links protegidos, desproteger links de download</title>
@@ -6,175 +6,34 @@
 		<meta http-equiv="content-style-type" content="text/css" />
 		<meta name="keywords" content="downloads, link protection, proteção links, deproteger, desproteger link, download direto, link protegido, reverse link, reveter link, retro link," />
 		<meta name="description" content="Faça seus downloads eliminando as páginas protetoras de link. Instale agora o Desprotetor de Links em seu navegador e com aspenas um clique burle estes links protegidos" />
-		<link media="screen" type="text/css" rel="stylesheet" href="/static/css/style.css" />
+		<link media="screen" type="text/css" rel="stylesheet" href="/static/css/default.min.css" />
+		<link rel="prefetch" href="/static/img/navegadores-ativos.png" />
 		<link rel="icon" href="favicon.ico" />
 		<link rel="shortcut icon" href="favicon.ico" />
 		<link rel="canonical" href="http://retrolink.com.br/" />
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-		<script type="text/javascript" src="/static/javascript/jquery.gritter.min.js"></script>
-		<script src="/static/javascript/jquery.colorbox.min.js"></script>
-		<script type="text/javascript">
-		$(document).ready(function(){
-
-			$("#redes-sociais").fadeIn(800);
-
-			$(window).scroll(function(){
-				if ($(this).scrollTop() != 0){
-					$('#irtopo').stop().animate({"right": 0});
-				} else {
-					$('#irtopo').stop().animate({"right": "-38px"});
-				}
-			});
-
-			$('#irtopo').click(function(){
-				$('body,html').animate({scrollTop:0},900);
-			});
-
-			$("#formbusca").submit(function() {
-
-				$("#verificar").removeClass("sucesso");
-				$("#verificar").removeClass("erro");
-
-				var links = $("#campourl").val();
-
-				if (links == 'http://') {
-					$("#verificar").addClass("sucesso");
-					Growl('Ocorreu um erro', 'É necessário utilizar uma url válida, por favor tente novamente...', 'ff0000', false);
-					return false;
-				} else if (links == ''){
-					$("#verificar").addClass("sucesso");
-					Growl('Ocorreu um erro', 'É necessário especificar a url que deseja desproteger, por favor tente novamente...', 'ff0000', false);
-					return false;
-				} else if (links !== '') {
-
-					$("#verificar").addClass("aguarde");
-					$("#verificar").html("Aguarde...");
-					$('#verificar').attr("disabled", true);
-
-					$('#campourl').attr("disabled", true);
-
-					$('#resultado').fadeIn(800).html("<img src='/static/img/loading.gif' style='float: left; padding-right:4px'>Aguarde, estamos verificando seu link...")
-					$.post("/api/",{links:links},
-					function(data){
-						$('#resultado').html(data);
-						$("#verificar").addClass("sucesso");
-						$("#verificar").html("Desproteger");
-						$("#limpar").fadeIn(800);
-						$('#campourl').removeAttr("disabled");
-						$('#verificar').removeAttr("disabled");
-						contador();
-					});
-					return false;
-				}
-
-			});
-
-			$("#limpar").click(function() {
-				$("#campourl").val('http://');
-				$('#resultado').fadeOut();
-				$('#limpar').fadeOut(800);
-				$.gritter.removeAll();
-				return false;
-			});
-
-			//counter de links verificados
-			function contador(){
-				$.post('/inc/counter.asp', function(data) {
-					var contador = $("#contador").text();
-					if (contador < data){
-						$('#contador').fadeOut(800);
-						$('#contador').fadeIn(800).text(data);
-					}
-				});
-			}
-
-			//executa a contagem do count de 10 em 10 segundos
-			setInterval(contador,10000);
-
-		});
-
-		//function gritter
-		function Growl(n_title, n_msg, color, fixed) {
-			color = color || "aefd8e";
-			fixed = fixed || false;
-			$.gritter.add({
-				title: '<span style="color: #' + color + '">' + n_title + '</span>',
-				text: n_msg,
-				sticky: fixed
-			});
-		}
-
-		//ESSE AINDA NÃO TESTEI...
-		function alerta_colorbox(u,t,w,h) {
-
-			var url    = u; //u = url
-			var tipo   = t; //t = tipo
-			var width  = w; //w = width
-			var height = h; //h = height
-
-			if (tipo == 1) {
-				//$.fn.colorbox({href:"/inc/box/box_fraudulento.asp", width:"50%"});
-				$.fn.colorbox({href:"/inc/box/"+url+".asp", width:"50%"});
-			} else if (tipo == 2){
-				//$.fn.colorbox({width:"50%", inline:true, href:"#inline"});
-				$.fn.colorbox({width:"50%", inline:true, href:"#"+url});
-			} else if (tipo == 3){
-				//$.fn.colorbox({href:"/verificar-link/estilo.asp", innerWidth:640, innerHeight:340});
-				$.fn.colorbox({href:"/inc/box/"+url+".asp", innerWidth:width, innerHeight:height});
-			}
-
-		}
-		
-		function alerta() {
-			$.fn.colorbox({width:"50%", inline:true, href:"#inline"});
-		}
-
-		function fraudulento() {
-			$.fn.colorbox({href:"/inc/box/box_fraudulento.asp", width:"50%"});
-		}
-
-		function linkquebrado() {
-			$.fn.colorbox({href:"/inc/box/box_linkquebrado.asp", width:"50%"});
-		}
-
-		function verifica_link(link) {
-			$.post("/inc/verifica/",{link:link},
-				function(data){
-					$('#verifica_arquivo').html(data);
-				}
-			);
-		}
-
-		function link_quebrado(acao) {
-			if (acao == "offline") {
-				$("#resultado a").addClass("urldownloadquebrado");
-			}
-		}
-		</script>
-		
 	</head>
 	<body>
-	<!-- menu
-	<style>
-		div.menu_item { text-align: center; float: left; background-color: #463906; padding: 5px 15px 7px 15px; margin-right: 2px;}
-		div.menu_item a { color: #fff; font: 15px Helvetica, Arial, Sans-Serif; }
-	</style>
-	<div id="menu" style="position: absolute; z-index: 99; left: 50%;">
-		<div style="width: 220px;" class="menu_item">
-			<a href="/em-seu-site">Coloque retroLink em seu site</a>
-		</div>
-		<div style="width: 100px;" class="menu_item">
-			<a href="mailto:contato@retrolink.com.br">Fale conosco</a>
-		</div>
+	
+	<div class="menu">
+		<ul>
+		  <li>
+			<a target="_blank" title="Entre em contato conosco" href="mailto:contato@retrolink.com.br">Fale conosco</a>
+		  </li>
+		  <li>
+			<a target="_blank" title="Baixe seus links com vantagens Premium!" href="http://www.contasturbo.com/">Gerador de Links Premium</a>
+		  </li>
+		  <li class="current">
+			<a title="Desproteja links com apenas um clique!" href="http://retrolink.com.br/">Desprotetor</a>
+		  </li>
+		</ul>
 	</div>
-	-->
 	
 	<div id="irtopo">
-		<img title="Topo Página" src="/static/img/irtopo.png" />
+		<img title="Topo da Página" alt="Ir ao topo" src="/static/img/irtopo.png" />
 	</div>
 		<div class="pagina">
 			<div class="comoFunciona">
-				<h1><a href="http://www.twitter.com/retrolinkbrasil" target="_blank" title="Siga-nos no twitter" rel="nofollow">retr<em>o</em>Link</a></h1>
+				<h1><a href="http://retrolink.com.br/" target="_blank" title="RetroLink Brasil">retr<em>o</em>Link</a></h1>
 				<em class="descricao">
 					Acabe com os <strong>protetores de links</strong> com apenas <strong>um clique</strong>
 					<br />
@@ -247,18 +106,9 @@
 				<a href="http://twitter.com/home?status=Esqueça%20os%20links%20protegidos%20e%20faça%20downloads%20tranquilamente%20-%20http://goo.gl/kIexU%20(via%20@retrolinkbrasil)" class="twitter" target="_blank" title="Siga-nos os bons!" rel="nofollow">Siga-nos os bons!</a>
 				<div class="borda"></div>
 				<div id="disqus_thread" style="width:90%;margin-left:64px;padding-bottom:20px"></div>
-				<script type="text/javascript">
-					var disqus_shortname = 'retrolink';
-					var disqus_url = 'http://retrolink.com.br/';
-					(function() {
-						var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-						dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-						(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-					})();
-				</script>
 			</div>
 		</div>
-
+		
 		<div style="display:none">
 			<div id="inline" style="padding:10px; background:#fff; font:11px/1.1 Verdana, sans-serif;">
 				<p><span style="font-size:14px; font-weight: bold">Por que minha url não foi desprotegida?</span></p>
@@ -273,7 +123,13 @@
 			</div>
 		</div>
 		
-		<img src="http://whos.amung.us/swidget/p8s0p8fyo90k/" width="80" height="15" border="0" style="display:none;" />
+		<!-- <img src="http://whos.amung.us/swidget/p8s0p8fyo90k/" width="80" height="15" border="0" style="display:none;" /> -->
+		
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script>if (!window.jQuery){document.write('<script src="http://retrolink.com.br/static/javascript/jquery-1.11.2.min.js">\x3C/script>');}</script>
+		<script type="text/javascript" src="/static/javascript/jquery.gritter.min.js"></script>
+		<script type="text/javascript" src="/static/javascript/jquery.colorbox.min.js"></script>
+		<script type="text/javascript" src="/static/javascript/default.js"></script>
 		
 		<script type="text/javascript">
 		  var _gaq = _gaq || [];
