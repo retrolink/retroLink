@@ -20,7 +20,7 @@
 			<a target="_blank" title="Entre em contato conosco" href="mailto:contato@retrolink.com.br">Fale conosco</a>
 		  </li>
 		  <li>
-			<a target="_blank" title="Baixe seus links com vantagens Premium!" href="http://www.contasturbo.com/">Gerador de Links Premium</a>
+			<a target="_blank" title="Baixe seus links com vantagens Premium!" href="http://www.contasturbo.com/?affid=9496">Gerador de Links Premium</a>
 		  </li>
 		  <li class="current">
 			<a title="Desproteja links com apenas um clique!" href="http://retrolink.com.br/">Desprotetor</a>
