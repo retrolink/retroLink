@@ -22,6 +22,9 @@
 		  <li>
 			<a target="_blank" title="Baixe seus links com vantagens Premium!" href="http://www.contasturbo.com/?affid=9496">Gerador de Links Premium</a>
 		  </li>
+		  <li>
+			<a target="_blank" rel="nofollow" title="Veja um vídeo explicativo" href="https://www.youtube.com/watch?v=nfwY_rM35gQ">Como funciona?</a>
+		  </li>
 		  <li class="current">
 			<a title="Desproteja links com apenas um clique!" href="http://retrolink.com.br/">Desprotetor</a>
 		  </li>
@@ -63,7 +66,7 @@
 						</a>
 					</li>
 					<li class="opera">
-						<a href="https://addons.opera.com/addons/extensions/details/retrolink/1.0/?display=pt_br" title="Instalar o retroLink no seu Opera" rel="nofollow" target="_blank">
+						<a href="https://addons.opera.com/addons/extensions/details/retrolink/?display=pt_br" title="Instalar o retroLink no seu Opera" rel="nofollow" target="_blank">
 							<strong>Opera</strong>
 							<span>Add plugin</span>
 						</a>
