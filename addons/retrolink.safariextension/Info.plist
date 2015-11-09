@@ -39,11 +39,9 @@
 				<key>Identifier</key>
 				<string>retrolink</string>
 				<key>Image</key>
-				<string>icon-32</string>
+				<string>icon.png</string>
 				<key>Label</key>
 				<string>Desprotetor retroLink</string>
-				<key>Include By Default</key>
-				<true/>
 				<key>Palette Label</key>
 				<string></string>
 				<key>Tool Tip</key>
