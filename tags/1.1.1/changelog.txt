@@ -1,0 +1,9 @@
+1.1.0 - 01/02/2015
+- Menu superior adicionado
+- Otimizações diversas
+
+
+1.0.0 - 16/09/2013
+-----------------------
+- retorLink Original
+
