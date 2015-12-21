@@ -1,55 +1,45 @@
-/*
-@font-face { font-family: unProtector_1; src: url("/static/fontes/retrolink_1.ttf"); }
-@font-face { font-family: unProtector_1; src: url("/static/fontes/retrolink_1.eot") }
-@font-face { font-family: unProtector_1; src: url("/static/fontes/retrolink_1.woff"); }
-@font-face { font-family: unProtector_2; src: url("/static/fontes/retrolink_2.eot") }
-@font-face { font-family: unProtector_2; src: url("/static/fontes/retrolink_2.ttf"); }
-@font-face { font-family: unProtector_2; src: url("/static/fontes/retrolink_2.woff"); }
-@font-face { font-family: unProtector_3; src: url("/static/fontes/retrolink_3.ttf"); }
-@font-face { font-family: unProtector_3; src: url("/static/fontes/retrolink_3.eot") }
-@font-face { font-family: unProtector_3; src: url("/static/fontes/retrolink_3.woff"); }
-*/
-
 *{font-family:Verdana, Sans-Serif;margin:0;padding:0}
 body{background:url(/static/img/bg-mais-baixados.jpg)}
 a{color:# 0;outline:none;text-decoration:none}
 a: hover{color:#4D81B3}
-div.comoFunciona{background:#FFDE00 url(/static/img/bg-cabecalho.jpg) repeat-x 0 bottom;display:block;padding-top:36px;position:relative}
-div.comoFunciona h1{color:#463906;display:block;font:100px/62px Helvetica, Arial, Sans-Serif;letter-spacing:-7px;margin:0 50px 30px 40px}
-div.comoFunciona h1 *{color:#463906;font:100px/62px Helvetica, Arial, Sans-Serif;text-decoration:none}
-div.comoFunciona h1 a:hover{color:#444}
-div.comoFunciona h1 em{background:url(/static/img/logo.png) no-repeat 0 0;display:inline-block;height:75px;margin:0 -3px 0 6px;text-indent:-999em;width:74px}
-div.comoFunciona em.descricao{color:#746204;display:block;font:30px/30px Helvetica, Arial, Sans-Serif;letter-spacing:-2px;margin:0 50px 40px 40px}
-div.comoFunciona em.descricao strong{color:#463906;font:40px/30px Helvetica, Arial, Sans-Serif}
-div.comoFunciona img.comoFunciona{float:left;margin:0 50px 40px 40px}
-div.comoFunciona ul.navegadores{clear:both;margin:0 0 30px 40px}
-div.comoFunciona ul.navegadores li{display:inline-block;list-style:0}
-div.comoFunciona ul.navegadores li a{background:url(/static/img/navegadores.png) no-repeat;color:#463906;display:block;font:18px/18px Helvetica, Arial, Sans-Serif;height:55px;margin:0 30px 20px 0;padding-left:65px;text-decoration:none}
-div.comoFunciona ul.navegadores li a:hover{background-color:#fff;background-image:url(/static/img/navegadores-ativos.png);margin:-10px 15px 10px -5px;padding:10px 15px 10px 70px}
-div.comoFunciona ul.navegadores li a strong{display:block;font-size:30px;line-height:25px;padding-top:5px}
-div.comoFunciona ul.navegadores li a span{background:url(/static/img/bg-instalar-plugin.png) no-repeat 0 7px;display:block;font-family:Helvetica, Arial, Sans-Serif;font-size:12px;line-height:26px;padding-left:15px}
-div.comoFunciona ul.navegadores li a.breve span{background:0;padding-left:0}
-div.comoFunciona ul li.chrome a{background-position:0 0}
-div.comoFunciona ul li.chrome a:hover strong{color:#062BB5}
-div.comoFunciona ul li.firefox a:hover strong{color:#D64203}
-div.comoFunciona ul li.opera a{background-position:0 -150px}
-div.comoFunciona ul li.opera a:hover strong{color:#CC0F16}
-div.comoFunciona ul li.ie a{background-position:0 -225px}
-div.comoFunciona ul li.safari a{background-position:0 -300px}
-div.comoFunciona ul li.safari a:hover strong{color:#000}
-div.comoFunciona div.desprotegerManual{display:block;margin:0 50px 10px}
-div.comoFunciona div.desprotegerManual form fieldset{border:none}
-div.comoFunciona div.desprotegerManual form fieldset h3{background:#463906 url(/static/img/bg-desproteger-manual.png) no-repeat right 0;color:#FFDE00;display:block;float:left;font:25px/40px Helvetica, Arial, Sans-Serif;margin-left:-50px;padding:0 30px 0 50px}
-div.comoFunciona div.desprotegerManual form fieldset ol{padding:5px}
-div.comoFunciona div.desprotegerManual form fieldset ol li{display:block;list-style:none}
-div.comoFunciona div.desprotegerManual form fieldset ol li label{color:#463906;display:block;float:left;font:15px/28px Helvetica, Arial, Sans-Serif;margin-right:15px}
-div.comoFunciona div.desprotegerManual form fieldset ol li input.txt{border:1px solid #C18A09;color:#463906;display:block;float:left;font:13px/18px Helvetica, Arial, Sans-Serif;margin-right:8px;padding:5px;width:45%}
-div.comoFunciona div.desprotegerManual form fieldset ol li button.botao{background:#FFDE00 url(/static/img/bg-botao.jpg) no-repeat;border:2px solid #463906;color:#463906;cursor:pointer;display:block;float:left;font:italic bold 15px/15px Helvetica, Arial, Sans-Serif;height:29px;padding:1px 7px 3px 25px}
-div.comoFunciona div.desprotegerManual form fieldset ol li button.aguarde{background-position:0 -25px}
-div.comoFunciona div.desprotegerManual form fieldset ol li button.sucesso{background-position:0 -50px}
-div.comoFunciona div.desprotegerManual form fieldset ol li button.limpar{background:#FFDE00 url(/static/img/bg-botao-limpar.png) no-repeat;border:2px solid #463906;color:#463906;cursor:pointer;display:block;float:left;font:italic bold 15px/15px Helvetica, Arial, Sans-Serif;height:29px;margin-left:8px;padding:1px 7px 3px 18px}
-div.comoFunciona div.desprotegerManual form fieldset ol li button.limpar:hover{background:#FFF url(/static/img/bg-botao-limpar.png) no-repeat;border:2px solid #463906}
-div.comoFunciona div.borda{background:url(/static/img/bg-cabecalho-borda.png) repeat-x 0 0;bottom:-15px;display:block;height:15px;position:relative;z-index:2}
+.content{background:#FFDE00 url(/static/img/bg-cabecalho.jpg) repeat-x 0 bottom;display:block;padding-top:36px;position:relative}
+.content h1{color:#463906;display:block;font:100px/62px Helvetica, Arial, Sans-Serif;letter-spacing:-7px;margin:0 50px 10px 40px}
+.content h1 *{color:#463906;font:100px/62px Helvetica, Arial, Sans-Serif;text-decoration:none}
+.content h1 a:hover{color:#444}
+.content h1 em{background:url(/static/img/logo.png) no-repeat 0 0;display:inline-block;height:75px;margin:0 -3px 0 6px;text-indent:-999em;width:74px}
+.content em.descricao{color:#746204;display:block;font:30px/30px Helvetica, Arial, Sans-Serif;letter-spacing:-2px;margin:0 50px 20px 40px}
+.content em.descricao strong{color:#463906;font:40px/30px Helvetica, Arial, Sans-Serif}
+#como-funciona{float:left;margin:15px 50px 30px 40px}
+.content ul.navegadores{clear:both;margin:15px 0 20px 40px}
+.content ul.navegadores li{display:inline-block;list-style:0}
+.content ul.navegadores li a{background:url(/static/img/navegadores.png) no-repeat;color:#463906;display:block;font:18px/18px Helvetica, Arial, Sans-Serif;height:55px;margin:0 30px 20px 0;padding-left:65px;text-decoration:none}
+.content ul.navegadores li a:hover{background-color:#fff;background-image:url(/static/img/navegadores-ativos.png);margin:-10px 15px 10px -5px;padding:10px 15px 10px 70px}
+.content ul.navegadores li a strong{display:block;font-size:30px;line-height:25px;padding-top:5px}
+.content ul.navegadores li a span{background:url(/static/img/bg-instalar-plugin.png) no-repeat 0 7px;display:block;font-family:Helvetica, Arial, Sans-Serif;font-size:12px;line-height:26px;padding-left:15px}
+.content ul.navegadores li a.breve span{background:0;padding-left:0}
+.content ul li.chrome a{background-position:0 0}
+.content ul li.chrome a:hover strong{color:#062BB5}
+.content ul li.firefox a:hover strong{color:#D64203}
+.content ul li.opera a{background-position:0 -150px}
+.content ul li.opera a:hover strong{color:#CC0F16}
+.content ul li.ie a{background-position:0 -225px}
+.content ul li.safari a{background-position:0 -300px}
+.content ul li.safari a:hover strong{color:#000}
+.manual{display:block;margin:0 50px 10px}
+.manual form fieldset{border:none}
+.manual form fieldset h3{background:#463906 url(/static/img/bg-desproteger-manual.png) no-repeat right 0;color:#FFDE00;display:block;float:left;font:25px/40px Helvetica, Arial, Sans-Serif;margin-left:-50px;padding:0 30px 0 50px}
+.manual form fieldset ol{padding:5px}
+.manual form fieldset ol li{display:block;list-style:none}
+.manual form fieldset ol li label{color:#463906;display:block;float:left;font:15px/28px Helvetica, Arial, Sans-Serif;margin-right:15px}
+.manual form fieldset ol li input.txt{border:1px solid #C18A09;color:#463906;display:block;float:left;font:13px/18px Helvetica, Arial, Sans-Serif;margin-right:8px;padding:5px;width:45%}
+.manual form fieldset ol li button.botao{background:#FFDE00 url(/static/img/bg-botao.jpg) no-repeat;border:2px solid #463906;color:#463906;cursor:pointer;display:block;float:left;font:italic bold 15px/15px Helvetica, Arial, Sans-Serif;height:29px;padding:1px 7px 3px 25px}
+.manual form fieldset ol li button.aguarde{background-position:0 -25px}
+.manual form fieldset ol li button.sucesso{background-position:0 -50px}
+.manual form fieldset ol li button.limpar{background:#FFDE00 url(/static/img/bg-botao-limpar.png) no-repeat;border:2px solid #463906;color:#463906;cursor:pointer;display:block;float:left;font:italic bold 15px/15px Helvetica, Arial, Sans-Serif;height:29px;margin-left:8px;padding:1px 7px 3px 18px}
+.manual form fieldset ol li button.limpar:hover{background:#FFF url(/static/img/bg-botao-limpar.png) no-repeat;border:2px solid #463906}
+#redes-sociais{display:none}
+#resultado{display:none;padding-left:280px;font-size:12px}
+.content div.borda{background:url(/static/img/bg-cabecalho-borda.png) repeat-x 0 0;bottom:-15px;display:block;height:15px;position:relative;z-index:2}
 div.maisBaixados{padding:50px 50px 20px}
 div.maisBaixados h2{color:#fff;display:block;font:40px/30px Helvetica, Arial, Sans-Serif;letter-spacing:-1px;margin:0 100px 45px 0}
 div.maisBaixados h2 strong{color:#fff;font:bold 50px/50px Helvetica, Arial, Sans-Serif;letter-spacing:-2px}
@@ -76,7 +66,7 @@ a.errodownload:hover{text-decoration:none}
 * html .gritter-item{padding-bottom:0}
 * html .gritter-bottom{margin-bottom:0}
 * html .gritter-close{background:url(/static/img/gritter/gritter-close-ie6.gif);height:22px;left:7px;top:7px;width:22px}
-#gritter-notice-wrapper{padding:10px 0;position:fixed;right:20px;top:20px;width:301px;z-index:9999}
+#gritter-notice-wrapper{padding:10px 0;position:fixed;right:20px;top:30px;width:301px;z-index:9999}
 #gritter-notice-wrapper a{color:#a4d2ff}
 .gritter-item-wrapper{background:url(.);margin:0;padding-bottom:10px;position:relative}
 .gritter-top{background:url(/static/img/gritter/gritter.png) no-repeat left -30px;height:10px}
@@ -127,7 +117,11 @@ a.errodownload:hover{text-decoration:none}
 .cboxIE6 #cboxBottomRight{background:url(/static/img/colorbox/ie6/borderBottomRight.png)}
 .cboxIE6 #cboxMiddleLeft{background:url(/static/img/colorbox/ie6/borderMiddleLeft.png)}
 .cboxIE6 #cboxMiddleRight{background:url(/static/img/colorbox/ie6/borderMiddleRight.png)}
-div.pagina,div.comoFunciona div.desprotegerManual form{display:block}
-div.comoFunciona em.descricao *,div.comoFunciona ul.navegadores li a *{font:inherit}
-div.comoFunciona ul li.firefox a,div.comoFunciona div.desprotegerManual form fieldset ol li button.erro{background-position:0 -75px}
+div.pagina,.manual form{display:block}
+.content em.descricao *,.content ul.navegadores li a *{font:inherit}
+.content ul li.firefox a,.manual form fieldset ol li button.erro{background-position:0 -75px}
 a.urldownload:hover,a.urldownloadquebrado:hover,a.copia-url:hover{text-decoration:underline}
+.none {display:none}
+.boxes {padding:10px;background:#fff;font:11px/1.1 Verdana, sans-serif}
+.boxes span {font-size:14px;font-weight:bold}
+.valid {float:left;padding-right:6px}
