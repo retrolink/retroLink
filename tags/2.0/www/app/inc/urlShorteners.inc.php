@@ -9,7 +9,11 @@ $list = array(
 	'tinyurl.com',
 	't.co',
 	'gd.is',
-	'fileurl.me'
+	'fileurl.me',
+	'yep.pm',
+	't.co',
+	'dfiles.eu',
+	'bit.do',
 );
 
 ?>

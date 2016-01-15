@@ -6,7 +6,9 @@ $list = array(
 	'ouo.io',
 	'urlink.biz',
 	'binbox.io',
-	'bxseriados.net'
+	'bxseriados.net',
+	'pasted.co',
+	'lix.in',
 );
 
 ?>

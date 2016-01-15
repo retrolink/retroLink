@@ -160,7 +160,7 @@ if (!empty($result['url']) && ($result['success'] || !$result['error'])) {
 			
 			echo "
 				<script type=\"text/javascript\">
-					alert('Consta em nosso sistema que o site ".$host.", é fraudulento pois exibe apenas propaganda... portanto, nada feito :/');
+					alert('Consta em nosso sistema que o site ".$host." é fraudulento ou malicioso. Portanto, nada feito :/');
 					window.location = 'http://retrolink.com.br';
 				</script>
 			";
@@ -168,7 +168,7 @@ if (!empty($result['url']) && ($result['success'] || !$result['error'])) {
 		} else {
 			
 			echo "
-				Consta em nosso sistema que o site <strong>".$host."</strong>, é fraudulento,
+				Consta em nosso sistema que o site <strong>".$host."</strong> é fraudulento,
 				<a href=\"javascript:alerta_colorbox('box_fraudulento');\" class=\"errodownload\">clique aqui</a> para mais informações
 				<script type=\"text/javascript\">
 					Growl('Ocorreu um erro', 'Site fraudulento detectado!', 'ff0000', false);
