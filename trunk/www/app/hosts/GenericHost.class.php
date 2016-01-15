@@ -19,7 +19,7 @@ class GenericHost {
 			array('hex', 'base64'),
 			array('base64', 'base64'),
 			array('hex', 'hex'),
-			array('base64', 'base64', 'base64')
+			array('base64', 'base64', 'base64'),
 			
 		);
 		
@@ -29,6 +29,9 @@ class GenericHost {
 		
 		$this->init();
 		
+		$link_s = substr($link, 1);
+		if (!stripos($link_s, 'http://') && !stripos($link_s, 'https://')) $link = str_ireplace(':=', ':=http://', $link);
+		
 		$normalSegments  = self::getSegments($link);
 		$specialSegments = self::getSpecialSegments($link);
 		
@@ -37,7 +40,7 @@ class GenericHost {
 		
 		$this->searchLink(array_merge($query, $specialSegments, $path), $normalSegments['fragment']);
 		
-		if (empty($this->_result)) $this->extractHttp(substr($link, 1));
+		if (empty($this->_result)) $this->extractHttp($link_s);
 		
 		if (empty($this->_result)) $this->_result = $link;
 		
@@ -82,7 +85,8 @@ class GenericHost {
 		
 		if ($this->_break) return false;
 		
-		if (preg_match('/(htt.*)/', $segment, $l)) $this->setLink($l[1]);
+		if (stripos($segment, 'magnet:') === 0) $this->setLink($segment);
+		elseif (preg_match('/(htt.*)/', $segment, $l)) $this->setLink($l[1]);
 		elseif (preg_match('/(htt.*)/', strrev($segment), $l)) $this->setLink($l[1]);
 		
 	}
@@ -102,7 +106,7 @@ class GenericHost {
 	
 	protected static function getSpecialSegments($string) {
 		
-		$markers = array('!', '?');
+		$markers = array('!', '?', ':=');
 		$result  = array();
 		
 		foreach ($markers as $var => $value) {

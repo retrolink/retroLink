@@ -38,15 +38,12 @@ final class retroLink {
 		
 		if ($this->_errorCode) return false;
 		
-		if ($this->checkList($link, 1)) {
+		if (stripos($link, 'magnet:') === 0 || $this->checkList($link, 1)) {
 			
 			if (!$final) return $this->setError(1);
-			else {
-				
-				$this->success();
-				return false;
-				
-			}
+			
+			$this->success();
+			return false;
 			
 		}
 		
@@ -68,7 +65,7 @@ final class retroLink {
 		//if ($link == $host->_link && get_class($host) != 'GenericHost') $host = new GenericHost($link);
 		
 		if (method_exists($host, 'getResult')) return $host->getResult();
-		else $this->logResult('Undefined method. '.$host.' '.$link);
+		else $this->logResult('Undefined method. '.get_class($host).' '.$link);
 		
 		return $link;
 		
@@ -86,7 +83,7 @@ final class retroLink {
 		
 	}
 	
-	// 0 - shortner, 1 - unprotected, 2 - notRelated, 3 - untrusted, 4 - oldServers
+	// 0 - shortner, 1 - unprotected, 2 - notRelated, 3 - untrusted, 4 - oldServers, 5 - withCaptcha
 	private function checkList($link, $list = 0) {
 		
 		if ($this->_errorCode) return false;
@@ -145,6 +142,8 @@ final class retroLink {
 	}
 	
 	private function getHost($link) {
+		
+		if (filter_var($link, FILTER_VALIDATE_URL) === false) return false;
 		
 		$host = parse_url($link, PHP_URL_HOST);
 		

@@ -18,7 +18,7 @@ final class Factory {
 	
     public static function getHost($host, $link) {
 		
-		$host = current(explode('.', $host, 2));
+		$host = str_ireplace('.', '_', $host);
 		
 		if (class_exists($host)) return new $host($link);
 		else return new GenericHost($link);

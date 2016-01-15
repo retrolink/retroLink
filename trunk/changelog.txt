@@ -1,5 +1,12 @@
+2.0.1 - 15/01/2016
+- Melhorias na nomeclatura das classes hosts
+- Listas atualizadas
+- Adicionado suporte para links magnet
+- Adicionado suporte para novos protetores
+
+
 2.0 - 03/12/2015
-- Refeito em PHP.
+- Refeito em PHP
 
 
 1.1.0 - 01/02/2015

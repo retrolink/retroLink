@@ -8,12 +8,21 @@ $list = array(
 	'fileace.com',
 	'flycell.com',
 	'protetor-de-link.blogspot.com',
+	'download-link-br.blogspot.com.br',
 	'offers.motime.com.br',
 	'k2downloads.info',
 	
 	//nao testados
 	'clixtk.com',
-	'jamster.com.br'
+	'ad.jamster.com.br',
+	'acervodemusicas.com',
+	'protetor-super-downloads.blogspot.com.br',
+	'wap.toing.com.br',
+	'megaclubme.com',
+	'ttkayo.me',
+	'dl.aimbot.me',
+	'yotefiles.com', // pishing mediafire
+	'cdn.formatfactoryfiles.com',
 );
 
 ?>
