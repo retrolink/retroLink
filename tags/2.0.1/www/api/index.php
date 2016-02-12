@@ -16,6 +16,7 @@ if (empty($_POST['url'])) {
 } else {
 	
 	if (stripos($_POST['url'], 'http') === false) $_POST['url'] = 'http://'.$_POST['url'];
+	else $_POST['url'] = str_ireplace('http://http://', 'http://', $_POST['url']);
 	
 	if (filter_var($_POST['url'], FILTER_VALIDATE_URL) === false) {
 		
