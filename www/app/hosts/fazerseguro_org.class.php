@@ -16,7 +16,7 @@ class fazerseguro_org extends GenericHost implements Hosts {
 		
 		$redirect = trim(strings::cut_str($page, '<a target="_blank" href="', '"'));
 		
-		if (stripos($redirect, 'http') === false) return $link;
+		if (!parent::isLink($link)) return $link;
 		
 		return $redirect;
 		

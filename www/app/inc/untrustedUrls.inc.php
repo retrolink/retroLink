@@ -23,6 +23,7 @@ $list = array(
 	'dl.aimbot.me',
 	'yotefiles.com', // pishing mediafire
 	'cdn.formatfactoryfiles.com',
+	'br-protetor-link.blogspot.com.br',
 );
 
 ?>

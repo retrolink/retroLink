@@ -1,8 +1,8 @@
 <?php 
 
-# http://protetor.therevolution.com.br/curtir/1548
+# http://linkurl.xyz/RKUOo
 
-class protetor_therevolution_com_br extends GenericHost implements Hosts {
+class linkurl_xyz extends GenericHost implements Hosts {
 	
 	public function __construct($link) {
 		
@@ -14,7 +14,7 @@ class protetor_therevolution_com_br extends GenericHost implements Hosts {
 		
 		$page = http::getPage($link);
 		
-		$redirect = trim(strings::cut_str($page, '<a href=\'', '\''));
+		$redirect = trim(strings::cut_str($page, 'window.location="', '"'));
 		
 		if (!parent::isLink($link)) return $link;
 		
