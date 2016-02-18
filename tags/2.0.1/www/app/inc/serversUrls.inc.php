@@ -3,6 +3,13 @@
 // www42.zippyshare.com
 
 $list = array(
+	'multiup.org',
+	'hydrofiles.com',
+	'filmora.wondershare.com',
+	'ifilez.org',
+	'k2s.cc',
+	'filerack.net',
+	'uploadshub.com',
 	'cld.pt',
 	'peggo.co',
 	'upload.cash',
