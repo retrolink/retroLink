@@ -91,6 +91,14 @@ class GenericHost {
 		
 	}
 	
+	protected static function isLink($link) {
+		
+		if (stripos($link, 'magnet:') === 0 || preg_match('/(htt.*)/', $link, $l)) return true;
+		
+		return false;
+		
+	}
+	
 	protected function setLink($link) {
 		
 		if (strlen($link) >= $this->_minLength) {
