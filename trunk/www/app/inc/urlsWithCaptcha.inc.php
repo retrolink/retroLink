@@ -9,6 +9,7 @@ $list = array(
 	'bxseriados.net',
 	'pasted.co',
 	'lix.in',
+	'url-ink.pw',
 );
 
 ?>

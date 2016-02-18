@@ -16,7 +16,7 @@ class comicon_com_br extends GenericHost implements Hosts {
 		
 		$redirect = trim(strings::cut_str($page, 'FF0000;" href="', '"'));
 		
-		if (stripos($redirect, 'http') === false) return $link;
+		if (!parent::isLink($link)) return $link;
 		
 		return $redirect;
 		
