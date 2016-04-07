@@ -3,6 +3,9 @@
 // www42.zippyshare.com
 
 $list = array(
+	'uploadmb.com',
+	'datafile.com',
+	'midiashared.com',
 	'multiup.org',
 	'hydrofiles.com',
 	'filmora.wondershare.com',
