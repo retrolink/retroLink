@@ -14,6 +14,7 @@ $list = array(
 	
 	//nao testados
 	'clixtk.com',
+	'4shareds.co', // pishing 4shared
 	'ad.jamster.com.br',
 	'acervodemusicas.com',
 	'protetor-super-downloads.blogspot.com.br',
@@ -24,6 +25,8 @@ $list = array(
 	'yotefiles.com', // pishing mediafire
 	'cdn.formatfactoryfiles.com',
 	'br-protetor-link.blogspot.com.br',
+	'mais-link.blogspot.com.br',
+	'mediafire.com-files-download.com',
 );
 
 ?>
