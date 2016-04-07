@@ -1,14 +1,12 @@
 {
 	"name": "retroLink",
-	"version": "2.2",
+	"version": "2.3",
 	"manifest_version": 2,
 	"description": "Desprotege links protegidos com apenas 1 clique!",
-	"id": "patrique@retrolink.com.br",
 	"applications": {
 		"gecko": {
 			"id": "patrique@retrolink.com.br",
-			"strict_min_version": "42.0.0",
-			"strict_max_version": "50.*"
+			"strict_min_version": "45.*"
 		}
 	},
 	"icons": {
