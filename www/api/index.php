@@ -1,6 +1,11 @@
 <?php
 
-if (!empty($_GET['url'])) $_POST['url'] = $_GET['url'];
+if (!empty($_GET['url'])) {
+	
+	$_POST['url'] = explode('url=', $_SERVER['REQUEST_URI'], 2);
+	$_POST['url'] = end($_POST['url']);
+	
+}
 
 if (empty($_POST['url'])) {
 	
