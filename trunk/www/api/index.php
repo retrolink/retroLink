@@ -1,5 +1,7 @@
 <?php
 
+header('Access-Control-Allow-Origin: *');
+
 if (!empty($_GET['url'])) {
 	
 	$_POST['url'] = explode('url=', $_SERVER['REQUEST_URI'], 2);
