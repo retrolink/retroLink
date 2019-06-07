@@ -1,5 +1,5 @@
 ﻿<?php
-
+exit();
 function testUserIP($user_ip, $cidrs) {
 	
 	$ipu = explode('.', $user_ip);
