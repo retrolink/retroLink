@@ -1,7 +1,7 @@
 {
     "name": "retroLink - Desprotetor de Links",
 	"short_name": "retroLink",
-	"version": "1.2.2",
+	"version": "1.2.3",
     "manifest_version": 2,
     "description": "O retroLink desprotege links protegidos com apenas 1 clique. Sem propagandas!",
 	"icons": {
@@ -18,6 +18,5 @@
 		"page": "background.html"
 	},
     "permissions": ["contextMenus", "tabs", "http://retrolink.com.br/api/"],
-	"update_url":"http://clients2.google.com/service/update2/crx"
-	
+	"update_url":"http://clients2.google.com/service/update2/crx"	
 }
