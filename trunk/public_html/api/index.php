@@ -40,7 +40,7 @@ if (empty($_POST['url'])) {
 	
 }
 
-define(APP, '../app/');
+define('APP', '../app/');
 require(APP.'retroLink.class.php');
 
 $retroLink = new retroLink(strip_tags($_POST['url']));
