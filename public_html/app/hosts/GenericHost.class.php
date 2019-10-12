@@ -71,7 +71,7 @@ class GenericHost {
 			foreach ($pattern as $var => $value) {
 				
 				if ($value == 'base64') $temp = base64_decode($temp);
-				elseif ($value == 'hex') $temp = preg_replace("'([\S,\d]{2})'e", "chr(hexdec('\\1'))", $temp);
+				elseif ($value == 'hex') $temp = pack("H*", $temp);
 				
 			}
 			
