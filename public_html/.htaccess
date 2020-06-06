@@ -4,3 +4,11 @@ RewriteEngine On
 RewriteBase /
 RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
 RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+
+<Files index.html>
+	Header add Link '</static/css/default.min.css>; rel=preload; as=style'
+    Header add Link '</static/javascript/jquery-1.4.2.min.js>; rel=preload; as=script'
+    Header add Link '</static/javascript/jquery.gritter.min.js>; rel=preload; as=script'
+    Header add Link '</static/javascript/jquery.colorbox.min.js>; rel=preload; as=script'
+    Header add Link '</static/javascript/default.js>; rel=preload; as=script'
+</Files>
