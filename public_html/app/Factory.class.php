@@ -2,7 +2,7 @@
 
 include(APP.'Hosts.interface.php');
 
-function __autoload($class) {
+function autoload($class) {
 	
 	if (file_exists(APP.'./hosts/'.$class.'.class.php')) {
 		
@@ -13,6 +13,8 @@ function __autoload($class) {
 	return class_exists($class, false);
 	
 }
+
+spl_autoload_register('autoload'); 
 
 final class Factory {
 	
