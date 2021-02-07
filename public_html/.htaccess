@@ -5,6 +5,10 @@ RewriteBase /
 RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
 RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
 
+# prevent requests in mail subdomain
+RewriteCond %{HTTP_HOST} mail\.(([^\.]+)) [NC]
+RewriteRule ^(.*)$ https://retrolink.com.br/$1 [L,R=301]
+
 <Files index.html>
 	Header add Link '</static/css/default.min.css>; rel=preload; as=style'
     Header add Link '</static/javascript/jquery-1.4.2.min.js>; rel=preload; as=script'
