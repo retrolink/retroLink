@@ -134,7 +134,14 @@ class GenericHost {
 	
 	protected static function getSegments($link) {
 		
-		$link = parse_url($link);
+		$link = array_merge(
+			[
+				'path'     => '',
+				'query'    => '',
+				'fragment' => '',
+			],
+			parse_url($link)
+		);
 		
 		return array('path' => $link['path'], 'query' => $link['query'], 'fragment' => $link['fragment']);
 		

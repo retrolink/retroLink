@@ -148,7 +148,7 @@ final class retroLink {
 		$host = parse_url($link, PHP_URL_HOST);
 		
 		$z = explode('.', $host, 3);
-		if ($z[1] == 'zippyshare') return $z[1];
+		if (array_key_exists(1, $z) !== false && $z[1] == 'zippyshare') return $z[1];
 		
 		return str_ireplace('www.', '', $host);
 		

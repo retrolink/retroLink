@@ -63,7 +63,9 @@ $link_o = substr($_POST['url'], 0, 65);
 if (strlen($result['url']) > 65) $link  .= '...';
 if (strlen($_POST['url']) > 65) $link_o .= '...';
 
-if ($_GET['addon']) {
+$addon = (array_key_exists('addon', $_GET) !== false && $_GET['addon']) ? true : false;
+
+if ($addon) {
 	
 	echo '<html></head><meta http-equiv="Content-type" content="text/html; charset=UTF-8" /></head><body>';
 	
@@ -85,7 +87,7 @@ if ($_GET['addon']) {
 
 if (!empty($result['url']) && ($result['success'] || !$result['error'])) {	
 	
-	if ($_GET['addon']) {
+	if ($addon) {
 		
 		echo "
 			<script type=\"text/javascript\">
@@ -115,7 +117,7 @@ if (!empty($result['url']) && ($result['success'] || !$result['error'])) {
 	
 	if ($result['error'] == 1) {
 		
-		if ($_GET['addon']) {
+		if ($addon) {
 			
 			echo "
 				<script type=\"text/javascript\">
@@ -141,7 +143,7 @@ if (!empty($result['url']) && ($result['success'] || !$result['error'])) {
 		
 	} elseif ($result['error'] == 2) {
 		
-		if ($_GET['addon']) {
+		if ($addon) {
 			
 			echo "
 				<script type=\"text/javascript\">
@@ -164,7 +166,7 @@ if (!empty($result['url']) && ($result['success'] || !$result['error'])) {
 		
 	} elseif ($result['error'] == 3) {
 		
-		if ($_GET['addon']) {
+		if ($addon) {
 			
 			echo "
 				<script type=\"text/javascript\">
@@ -187,7 +189,7 @@ if (!empty($result['url']) && ($result['success'] || !$result['error'])) {
 		
 	} elseif ($result['error'] == 4) {
 		
-		if ($_GET['addon']) {
+		if ($addon) {
 			
 			echo "
 				<script type=\"text/javascript\">
@@ -214,7 +216,7 @@ if (!empty($result['url']) && ($result['success'] || !$result['error'])) {
 		
 	} elseif ($result['error'] == 5) {
 		
-		if ($_GET['addon']) {
+		if ($addon) {
 			
 			echo "
 				<script type=\"text/javascript\">
@@ -239,7 +241,7 @@ if (!empty($result['url']) && ($result['success'] || !$result['error'])) {
 		
 	} else {
 		
-		if ($_GET['addon']) {
+		if ($addon) {
 			
 			echo "
 				<script type=\"text/javascript\">
@@ -271,6 +273,6 @@ if (!empty($result['url']) && ($result['success'] || !$result['error'])) {
 	
 }
 
-if ($_GET['addon']) echo '</body></html>';
+if ($addon) echo '</body></html>';
 
 ?>
