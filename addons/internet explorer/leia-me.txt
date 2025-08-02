@@ -1,3 +1,0 @@
-Para editar a addon do retrolink para o internet explorer, vai ser necessário vc baixar o programa Create Install Free, é por ele que eu monto o instalador e a addon.
-
-O arquivo incluso aqui é o editavel, utilize o programa para melhorar a addon e depois compile no Create Install Free para exe.
